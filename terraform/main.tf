@@ -20,7 +20,7 @@ resource "aws_lambda_function" "ec2_remediation" {
   depends_on = [aws_iam_role_policy.lambda_policy]
 }
 
-resource "aws_lambda_function" "rds_remediation" {
+/* resource "aws_lambda_function" "rds_remediation" {
   filename      = "../lambda/rds_remediation.zip"
   function_name = "${var.project_name}-rds-remediation"
   role          = aws_iam_role.lambda_role.arn
@@ -36,7 +36,7 @@ resource "aws_lambda_function" "rds_remediation" {
   }
 
   depends_on = [aws_iam_role_policy.lambda_policy]
-}
+} */
 
 resource "aws_cloudwatch_event_rule" "ec2_alarm_rule" {
   name        = "${var.project_name}-ec2-alarm-rule"
