@@ -37,7 +37,7 @@ resource "aws_cloudwatch_metric_alarm" "ec2_status_alarm" {
   alarm_actions = [aws_sns_topic.alerts.arn]
 }
 
-resource "aws_cloudwatch_metric_alarm" "rds_connection_alarm" {
+/* resource "aws_cloudwatch_metric_alarm" "rds_connection_alarm" {
   alarm_name          = "${var.project_name}-rds-connections"
   alarm_description   = "Triggers when RDS connection count exceeds threshold"
   metric_name         = "DatabaseConnections"
@@ -54,7 +54,7 @@ resource "aws_cloudwatch_metric_alarm" "rds_connection_alarm" {
   }
 
   alarm_actions = [aws_sns_topic.alerts.arn]
-}
+} */
 
 resource "aws_cloudwatch_log_group" "ec2_lambda_logs" {
   name              = "/aws/lambda/${var.project_name}-ec2-remediation"
