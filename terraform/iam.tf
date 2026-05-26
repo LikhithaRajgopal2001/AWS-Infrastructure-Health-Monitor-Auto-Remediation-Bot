@@ -24,11 +24,11 @@ resource "aws_iam_role_policy" "lambda_policy" {
         Action   = ["ec2:DescribeInstances", "ec2:RebootInstances", "ec2:StartInstances", "ec2:StopInstances"]
         Resource = "*"
       },
-      {
+      /* {
         Effect   = "Allow"
         Action   = ["rds:DescribeDBInstances", "rds:RebootDBInstance", "rds:StartDBInstance", "rds:StopDBInstance"]
         Resource = "*"
-      },
+      }, */
       {
         Effect   = "Allow"
         Action   = ["sns:Publish"]
