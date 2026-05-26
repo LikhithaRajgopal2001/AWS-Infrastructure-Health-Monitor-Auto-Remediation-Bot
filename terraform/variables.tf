@@ -27,11 +27,11 @@ variable "cpu_alarm_threshold" {
   default     = 80
 }
 
-variable "rds_connection_threshold" {
+/* variable "rds_connection_threshold" {
   description = "Number of DB connections that triggers the RDS alarm"
   type        = number
   default     = 100
-}
+} */
 
 variable "alarm_evaluation_periods" {
   description = "Number of consecutive periods before alarm fires"
