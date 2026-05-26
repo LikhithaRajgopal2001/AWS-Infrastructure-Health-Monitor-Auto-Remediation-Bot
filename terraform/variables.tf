@@ -15,11 +15,11 @@ variable "ec2_instance_id" {
   type        = string
 }
 
-'''variable "rds_instance_id" {
-  description = "ID of the RDS instance to monitor"
-  type        = string
-  default     = ""
-}'''
+#variable "rds_instance_id" {
+#  description = "ID of the RDS instance to monitor"
+  #type        = string
+  #default     = ""
+#}
 
 variable "cpu_alarm_threshold" {
   description = "CPU utilization % that triggers the EC2 alarm"
